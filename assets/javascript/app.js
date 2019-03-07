@@ -1,5 +1,6 @@
 window.onload = function() {
     $(".button").on("click", loadQuestion);
+    console.log(button);
   };
 // On click i want to load the questions that i will set below
 
@@ -18,7 +19,7 @@ window.onload = function() {
 
 // Step 1:
 // Use the following Audio file below:
-var audio = new Audio("raven.mp3");
+// var audio = new Audio("raven.mp3");
 
 //  Step 2:
 //  after 5 seconds, execute the fiveSeconds function
