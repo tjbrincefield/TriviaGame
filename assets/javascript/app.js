@@ -1,4 +1,20 @@
-//  Simple Timer Solution
+window.onload = function() {
+    $(".button").on("click", loadQuestion);
+  };
+// On click i want to load the questions that i will set below
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Step 1:
 // Use the following Audio file below:
