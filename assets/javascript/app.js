@@ -19,7 +19,7 @@ var questions = [{
 },
 
 {
-  question:"Where was the first wine made?"
+  question:"Where was the first known winery located?"
   answer:["Babylon", "China", "Armenia", "Greece", "Sicily"]
   correctAnswer:"Armenia"
     // you can add an image here if you want
@@ -68,16 +68,16 @@ var questions = [{
 },
 
 {
-  question:""
-  answer:["", ""]
-  correctAnswer:""
+  question:"How many varieties of wine grapes exist in the world today?"
+  answer:["5,000", "1,000", "50,000", "10,000"]
+  correctAnswer:"There are over 10,000 kinds of grapes"
   // you can add an image here if you want
 },
 
 {
-  question:""
-  answer:["", ""]
-  correctAnswer:""
+  question:"When was the corkscrew designed?"
+  answer:["1800's", "1900's", "6000 B.C", "1700's"]
+  correctAnswer:"It was designed in the mid-1800s"
   // you can add an image here if you want
 }];
 
