@@ -4,6 +4,7 @@ window.onload = function() {
 
   function loadQuestion() {
     questions[i];
+
     console.log("loadQuestion");
   }
 
@@ -22,7 +23,6 @@ var questions = [{
   answer:["Babylon", "China", "Armenia", "Greece", "Sicily"]
   correctAnswer:"Armenia"
     // you can add an image here if you want
-
 },
 
 {
@@ -30,7 +30,6 @@ var questions = [{
   answer:["Reisling", "Chardonnay", "Moscato", "Pinot Grigio", "Sauvignon Blanc"]
   correctAnswer:"Chardonnay"
   // you can add an image here if you want
-
 },
 
 {
@@ -38,24 +37,49 @@ var questions = [{
   answer: ["True", "False"]
   correctAnswer: "False; Fortified wines have had brandy or another spirit added to them "
     // you can add an image here if you want
-
 }
 
 {
-  question:""
-  answer:[""]
-  correctAnswer:""
+  question:"What kind of French wine is traditionally made from the pinot noir grape?"
+  answer:["Beaujolais", "Bordeaux", "Merlot", "Pinot Noir", "Burgundy"]
+  correctAnswer:"Burgundy"
   // you can add an image here if you want
-
 }
 
 {
+  question:"What was Dom Perignon’s occupation when he invented Champagne?"
+  answer:["Carpenter", "Blacksmith", "Monk", "Shoe Cobbler", "Sculptor"]
+  correctAnswer:"Monk"
+  // you can add an image here if you want
+},
+
+{
+  question:"How many standard wine bottles equals one Nebuchadnezzar??"
+  answer:["20", "15", "12", "6", "25"]
+  correctAnswer:"20"
+  // you can add an image here if you want
+},
+
+{
+  question:"True or False: Red wine is made from red grapes, and white wine is made from white grapes"
+  answer:["True", "False"]
+  correctAnswer:"False; red wine gets its color because the grape skins are left to ferment with the juice. To make white wine, the skins are removed before fermentation."
+  // you can add an image here if you want
+},
+
+{
   question:""
-  answer:[""]
+  answer:["", ""]
   correctAnswer:""
   // you can add an image here if you want
+},
 
-},];
+{
+  question:""
+  answer:["", ""]
+  correctAnswer:""
+  // you can add an image here if you want
+}];
 
 
 
