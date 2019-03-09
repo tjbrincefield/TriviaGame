@@ -1,8 +1,45 @@
 window.onload = function() {
     $(".button").on("click", loadQuestion);
-    console.log(button);
   };
-// On click i want to load the questions that i will set below
+
+  function loadQuestion() {
+    questions[i];
+    console.log("loadQuestion");
+  }
+
+
+  // On click i want to load the questions that i will set below
+
+var questions = [{
+  question:"What is the average weight for a bottle of wine?"
+  answer:["2.65lbs","1.33lbs","5lbs","3lbs","2.1lbs"]
+  correctAnswer:"2.65lbs"
+  // you can add an image here if you want
+},
+
+{
+  question:"Where was the first wine made?"
+  answer:["Babylon", "China", "Armenia", "Greece", "Sicily"]
+  correctAnswer:"Armenia"
+    // you can add an image here if you want
+
+},
+
+{
+  question:"The most popular type of white wine is _________"
+  answer:["Reisling", "Chardonnay", "Moscato", "Pinot Grigio", "Sauvignon Blanc"]
+  correctAnswer:"Chardonnay"
+  // you can add an image here if you want
+
+},
+
+{
+  question:""
+  answer: 
+  correctAnswer: 
+    // you can add an image here if you want
+
+}];
 
 
 
