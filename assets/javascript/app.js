@@ -34,12 +34,28 @@ var questions = [{
 },
 
 {
-  question:""
-  answer: 
-  correctAnswer: 
+  question:"True or False: Fortified wines have been distilled to have a greater alcohol content"
+  answer: ["True", "False"]
+  correctAnswer: "False; Fortified wines have had brandy or another spirit added to them "
     // you can add an image here if you want
 
-}];
+}
+
+{
+  question:""
+  answer:[""]
+  correctAnswer:""
+  // you can add an image here if you want
+
+}
+
+{
+  question:""
+  answer:[""]
+  correctAnswer:""
+  // you can add an image here if you want
+
+},];
 
 
 
