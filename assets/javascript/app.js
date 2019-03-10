@@ -38,7 +38,7 @@ function endGame (){
     $.each($("input[name='question-"+ i +"']:checked"), function(){
       if ($(this).val() === questions[i].correctAnswer){
         correctAnswer++;
-        $("#correctAnswers").html("Correct Answers: " + correctAnswer);
+        $("#correctAnswers").append("Correct Answers: " + correctAnswer);
         // how to get the correct answers to show up on the screen?
       }
       else{
@@ -57,8 +57,7 @@ function loadQuestion() {
   for (var i=0; i < questions.length; i++) {
     $("#questions").append("<h1> " + questions[i].question + " </h1>");
     for(var j = 0; j < questions[i].answer.length; j++){
-      $("#questions").append("<input type='radio' class='answer' name='question-" +i+ " ' value=" + questions[i].answer[j] + "> " + questions[i].answer[j]);
-    // how do i get a space inbetween the radio buttons and the answers?
+      $("#questions").append("<input type='radio' class='answer' name='question-" +i+ " ' value=" + questions[i].answer[j]+ " > " +questions[i].answer[j]);
     }
   };
   
@@ -115,7 +114,7 @@ var questions = [{
 
 {
   question:"How many varieties of wine grapes exist in the world today?",
-  answer:["5,000", "1,000", "50,000", "10,000"],
+  answer:["5,000" , "1,000" , "50,000" , "10,000"],
   correctAnswer:"There are over 10,000 kinds of grapes"
 },
 
