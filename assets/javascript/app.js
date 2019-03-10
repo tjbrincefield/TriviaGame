@@ -5,19 +5,14 @@ window.onload = function() {
 
   function loadQuestion() {
     for (i=0; i< questions.length; i++) {
-      $("#question").text(this.question);
-      $("#answer").text(this.answer[i]);
+      $("#question").text(questions[i].question);
+      console.log(questions[i].question);
+      $("#answer").text(questions[i].answer);
+      console.log(questions[i].answer);
       // i want to load the questions when the button is clicked - and then only load the answer after the time is up
     };
-    // tenSeconds() 
-    //   $("#time-left").append("<h2>About 5 Seconds Left!</h2>");
-    //   console.log("5 seconds left");
     
   };
-
-  // // setTimeout(fiveSeconds, 1000 * 5);
-  // setTimeout(tenSeconds, 1000 * 10);
-  // setTimeout(timeUp, 1000 * 15);
 
   // On click i want to load the questions that i will set below
 
@@ -91,9 +86,45 @@ var questions = [{
   // you can add an image here if you want
 }];
 
+
+// //  Simple Timer Solution
+
+// // Step 1:
+// // Use the following Audio file below:
+// var audio = new Audio("raven.mp3");
+
+// //  Step 2:
+// //  after 5 seconds, execute the fiveSeconds function
+// //  after 10 seconds, execute the tenSeconds function
+// //  after 15 seconds, execute the timeUp function
+
+// setTimeout(fiveSeconds, 1000 * 5);
+// setTimeout(tenSeconds, 1000 * 10);
+// setTimeout(timeUp, 1000 * 15);
+
+// //  Step 3:
+// //  Fill in the blanks to these functions.
+// function fiveSeconds() {
+//   // in the element with an id of time-left add an h2 saying About 10 Seconds Left!
+//   // console log 10 seconds left
+//   $("#time-left").append("<h2>About 10 Seconds Left!</h2>");
+//   console.log("10 seconds left");
+// }
+
+// function tenSeconds() {
+//   // in the element with an id of time-left add an h2 saying About 5 Seconds Left!
+//   // console log 5 seconds left
+//   $("#time-left").append("<h2>About 5 Seconds Left!</h2>");
+//   console.log("5 seconds left");
+// }
+
 // function timeUp() {
+//   // in the element with an id of time-left add an h2 saying Time's Up!
+//   // console log done
 //   console.log("done");
 //   $("#time-left").append("<h2>Time's Up!</h2>");
 //   console.log("time is up");
-// };
 
+//   //  The following line will play the audio file we linked to above:
+//   audio.play();
+// }
