@@ -1,14 +1,15 @@
-window.onload = function() {
-  };
-  // $(document).ready(function() - did i need this instead of the window onload function?
+$(document).ready(function() {
   $(".button").on("click", loadQuestion);
+});
 
   function loadQuestion() {
-    for (i=0; i< questions.length; i++) {
-      $("#question").text(questions[i].question);
-      console.log(questions[i].question);
-      $("#answer").text(questions[i].answer);
-      console.log(questions[i].answer);
+    for (var i=0; i< questions.length; i++) {
+      $("#questions").append("<h1>"+ questions[i].question +"</h1>");
+
+      for(var j=0; j<questions[i].answer.length; j++){
+        $("#questions").append("<input type='radio' name= 'Question-" +i+" ' value="+questions[i].answer[j]+"> "+ questions[i].answer[j]);
+
+      }
       // i want to load the questions when the button is clicked - and then only load the answer after the time is up
     };
     
