@@ -1,21 +1,68 @@
 $(document).ready(function() {
-  $(".button").on("click", loadQuestion);
+  loadQuestion();
 });
 
-  function loadQuestion() {
-    for (var i=0; i< questions.length; i++) {
-      $("#questions").append("<h1>"+ questions[i].question +"</h1>");
+var timer = 60;
+var intervalID, correctAnswer= 0 , wrongAnswer = 0;
+$("#questions").hide();
 
-      for(var j=0; j<questions[i].answer.length; j++){
-        $("#questions").append("<input type='radio' name= 'Question-" +i+" ' value="+questions[i].answer[j]+"> "+ questions[i].answer[j]);
 
+$(".button").on("click", startGame);
+$("#endGame").on("click", endGame);
+
+// setTimeout(thirtySeconds, 1000 * 30);
+// setTimeout(timeUp, 1000 * 60);
+
+function startGame () {
+  decrementTimer();
+  $("#questions").show();
+}
+
+function decrementTimer (){
+  intervalID = setInterval(function (){
+    timer--;
+    if(timer === 0) {
+      clearInterval(intervalID);
+      endGame();
+    }
+  }, 1 * 1000)
+}
+
+// function thirtySeconds (){
+//   $("#time-left").append("<h2>About 30 Seconds Left!</h2>");
+// }
+
+function endGame (){
+  $("#questions").hide();
+  for(var i=0; i< questions.length; i++){
+    $.each($("input[name='question-"+ i +"']:checked"), function(){
+      if ($(this).val() === questions[i].correctAnswer){
+        correctAnswer++;
+        $("#correctAnswers").html("Correct Answers: " + correctAnswer);
+        // how to get the correct answers to show up on the screen?
       }
-      // i want to load the questions when the button is clicked - and then only load the answer after the time is up
-    };
-    
-  };
+      else{
+        wrongAnswer++
+      }
+    })
+  }
+}
 
-  // On click i want to load the questions that i will set below
+// function timeUp (){
+//   $("#time-left").alert("<h2>Time's Up!</h2>");
+// }
+
+
+function loadQuestion() {
+  for (var i=0; i < questions.length; i++) {
+    $("#questions").append("<h1> " + questions[i].question + " </h1>");
+    for(var j = 0; j < questions[i].answer.length; j++){
+      $("#questions").append("<input type='radio' class='answer' name='question-" +i+ " ' value=" + questions[i].answer[j] + "> " + questions[i].answer[j]);
+    }
+  };
+  
+};
+
 
 var questions = [{
   question: "What is the average weight for a bottle of wine?",
@@ -88,44 +135,3 @@ var questions = [{
 }];
 
 
-// //  Simple Timer Solution
-
-// // Step 1:
-// // Use the following Audio file below:
-// var audio = new Audio("raven.mp3");
-
-// //  Step 2:
-// //  after 5 seconds, execute the fiveSeconds function
-// //  after 10 seconds, execute the tenSeconds function
-// //  after 15 seconds, execute the timeUp function
-
-// setTimeout(fiveSeconds, 1000 * 5);
-// setTimeout(tenSeconds, 1000 * 10);
-// setTimeout(timeUp, 1000 * 15);
-
-// //  Step 3:
-// //  Fill in the blanks to these functions.
-// function fiveSeconds() {
-//   // in the element with an id of time-left add an h2 saying About 10 Seconds Left!
-//   // console log 10 seconds left
-//   $("#time-left").append("<h2>About 10 Seconds Left!</h2>");
-//   console.log("10 seconds left");
-// }
-
-// function tenSeconds() {
-//   // in the element with an id of time-left add an h2 saying About 5 Seconds Left!
-//   // console log 5 seconds left
-//   $("#time-left").append("<h2>About 5 Seconds Left!</h2>");
-//   console.log("5 seconds left");
-// }
-
-// function timeUp() {
-//   // in the element with an id of time-left add an h2 saying Time's Up!
-//   // console log done
-//   console.log("done");
-//   $("#time-left").append("<h2>Time's Up!</h2>");
-//   console.log("time is up");
-
-//   //  The following line will play the audio file we linked to above:
-//   audio.play();
-// }
