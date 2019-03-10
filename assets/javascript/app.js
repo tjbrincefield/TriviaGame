@@ -1,11 +1,13 @@
 window.onload = function() {
-    
   };
+  // $(document).ready(function() - did i need this instead of the window onload function?
   $(".button").on("click", loadQuestion);
+
   function loadQuestion() {
     for (i=0; i< questions.length; i++) {
       $("#question").text(this.question);
       $("#answer").text(this.answer[i]);
+      // i want to load the questions when the button is clicked - and then only load the answer after the time is up
     };
     // tenSeconds() 
     //   $("#time-left").append("<h2>About 5 Seconds Left!</h2>");
