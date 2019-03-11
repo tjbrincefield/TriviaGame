@@ -18,6 +18,13 @@ function startGame () {
   $("#questions").show();
 }
 
+function thirtySeconds (){
+  $("#time-left").html("<h2>");
+  alert("Thirty seconds left!");
+  console.log(thirtySeconds);
+  // i dont want this to start when i load the page, but i want it to start when i click the start button
+}
+
 function decrementTimer (){
   intervalID = setInterval(function (){
     timer--;
@@ -28,11 +35,6 @@ function decrementTimer (){
   }, 1 * 1000)
 }
 
-function thirtySeconds (){
-  $("#time-left").html("<h2>");
-  alert("Thirty seconds left!");
-  console.log(thirtySeconds);
-}
 // function timeUp (){
 //   $("#time-left").alert("<h2>");
 //   alert("Time's Up!");
