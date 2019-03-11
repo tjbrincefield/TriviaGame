@@ -10,7 +10,7 @@ $("#questions").hide();
 $(".button").on("click", startGame);
 $("#endGame").on("click", endGame);
 
-// setTimeout(thirtySeconds, 1000 * 30);
+setTimeout(thirtySeconds, 1000 * 30);
 // setTimeout(timeUp, 1000 * 60);
 
 function startGame () {
@@ -28,8 +28,15 @@ function decrementTimer (){
   }, 1 * 1000)
 }
 
-// function thirtySeconds (){
-//   $("#time-left").append("<h2>About 30 Seconds Left!</h2>");
+function thirtySeconds (){
+  $("#time-left").html("<h2>");
+  alert("Thirty seconds left!");
+  console.log(thirtySeconds);
+}
+// function timeUp (){
+//   $("#time-left").alert("<h2>");
+//   alert("Time's Up!");
+//   console.log(timeUp);
 // }
 
 function endGame (){
@@ -37,8 +44,9 @@ function endGame (){
   for(var i=0; i< questions.length; i++){
     $.each($("input[name='question-"+ i +"']:checked"), function(){
       if ($(this).val() === questions[i].correctAnswer){
+        // $("#correctAnswers").html("Correct answer: " + questions[i].correctAnswer);
         correctAnswer++;
-        $("#correctAnswers").append("Correct Answers: " + correctAnswer);
+        console.log(endGame);
         // how to get the correct answers to show up on the screen?
       }
       else{
@@ -47,10 +55,6 @@ function endGame (){
     })
   }
 }
-
-// function timeUp (){
-//   $("#time-left").alert("<h2>Time's Up!</h2>");
-// }
 
 
 function loadQuestion() {
