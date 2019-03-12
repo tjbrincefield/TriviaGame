@@ -10,19 +10,18 @@ $("#questions").hide();
 $(".button").on("click", startGame);
 $("#endGame").on("click", endGame);
 
-setTimeout(thirtySeconds, 1000 * 30);
 // setTimeout(timeUp, 1000 * 60);
 
 function startGame () {
   decrementTimer();
   $("#questions").show();
+  setTimeout(thirtySeconds, 1000 * 30);
 }
 
 function thirtySeconds (){
-  $("#time-left").html("<h2>");
+  $("#time-left").append("<h2>");
   alert("Thirty seconds left!");
   console.log(thirtySeconds);
-  // i dont want this to start when i load the page, but i want it to start when i click the start button
 }
 
 function decrementTimer (){
@@ -41,21 +40,46 @@ function decrementTimer (){
 //   console.log(timeUp);
 // }
 
+var array = []
+
 function endGame (){
   $("#questions").hide();
-  for(var i=0; i< questions.length; i++){
-    $.each($("input[name='question-"+ i +"']:checked"), function(){
-      if ($(this).val() === questions[i].correctAnswer){
-        // $("#correctAnswers").html("Correct answer: " + questions[i].correctAnswer);
-        correctAnswer++;
-        console.log(endGame);
-        // how to get the correct answers to show up on the screen?
+  $('input[type=radio]:checked').each(function(){
+    array.push($(this).val());
+    // if ($('.answer').is(":checked"))
+    // {
+    //   console.log($('.answer').val(), 'value');
+    // }  // // for(var i=0; i< questions.length; i++){
+  
+})
+console.log(array);
+
+for (var q = 0; q < questions.length; q++ ) {
+  // console.log(questions[q]);
+  for (var a = 0; a < questions[q].answer.length; a++) {
+    for ( var i = 0; i < array.length; i++) {
+      if (questions[q].answer[a] === array[i]) {
+        // console.log(questions[q], 'these are correct')
+        var response = questions[q]
+        console.log(response)
+        $("#correctAnswers").append("Correct answer: " + response.correctAnswer);
       }
-      else{
-        wrongAnswer++
-      }
-    })
+    }
   }
+}
+    // // for(var i=0; i< questions.length; i++){
+
+  //   $(".answer[name='question-"+ i +"']:checked"), function(){
+  //     console.log("This is working");
+      // if ($(this).val() === questions[i].correctAnswer){
+  //       correctAnswer++;
+  //       // how to get the correct answers to show up on the screen?
+  //     }
+  //     else{
+  //       wrongAnswer++
+  //     }
+  //   }
+  // }
 }
 
 
@@ -63,7 +87,7 @@ function loadQuestion() {
   for (var i=0; i < questions.length; i++) {
     $("#questions").append("<h1> " + questions[i].question + " </h1>");
     for(var j = 0; j < questions[i].answer.length; j++){
-      $("#questions").append("<input type='radio' class='answer' name='question-" +i+ " ' value=" + questions[i].answer[j]+ " > " +questions[i].answer[j]);
+      $("#questions").append("<input type='radio' class='answer' name='question-" +i+ " ' value="+ questions[i].answer[j]+" > " +questions[i].answer[j]);
     }
   };
   
