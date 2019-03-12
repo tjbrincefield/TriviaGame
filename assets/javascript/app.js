@@ -52,7 +52,7 @@ function endGame (){
     // }  // // for(var i=0; i< questions.length; i++){
   
 })
-console.log(array);
+// console.log(array);
 
 for (var q = 0; q < questions.length; q++ ) {
   // console.log(questions[q]);
@@ -61,8 +61,9 @@ for (var q = 0; q < questions.length; q++ ) {
       if (questions[q].answer[a] === array[i]) {
         // console.log(questions[q], 'these are correct')
         var response = questions[q]
-        console.log(response)
-        $("#correctAnswers").append("Correct answer: " + response.correctAnswer);
+        // console.log(response)
+        // $("#questions").append("Question: " + response);
+        $("#correctAnswers").append("Correct answer: " +  response.question +" "+ response.correctAnswer);
       }
     }
   }
