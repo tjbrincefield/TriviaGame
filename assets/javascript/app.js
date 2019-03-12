@@ -15,13 +15,13 @@ $("#endGame").on("click", endGame);
 function startGame () {
   decrementTimer();
   $("#questions").show();
-  setTimeout(thirtySeconds, 1000 * 30);
+  setTimeout(thirtySeconds, 1000 * 270);
 }
 
 function thirtySeconds (){
   $("#time-left").append("<h2>");
   alert("Thirty seconds left!");
-  console.log(thirtySeconds);
+  // console.log(thirtySeconds);
 }
 
 function decrementTimer (){
@@ -64,6 +64,8 @@ for (var q = 0; q < questions.length; q++ ) {
         // console.log(response)
         // $("#questions").append("Question: " + response);
         $("#correctAnswers").append("Correct answer: " +  response.question +" "+ response.correctAnswer);
+        // $("#correctAnswers").css({"font-size": "30px"});
+        // $("#correctAnswers").html("<ol>");
       }
     }
   }
