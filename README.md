@@ -1,10 +1,15 @@
 # TriviaGame
 
--The page will populate and there will be only the option to click the button
--When user clicks on the Cheers button, i want the game to populate on the same screen
--The 4 questions will pop up on the screen and the answers will be a mix of multiple choice/true false
--The timer will give them a timer to show that they have 3 minutes to figure it out
--There will be another alert timer with 15 seconds left
--Player cannot select more than one answer per question
--There will be another alert that shows them the correct answers/or have the answers in a separate page that downloads? + what the player got correct/incorrect
+##**Do you have what it takes to be a wine master? Take the quiz and test your knowledge!**
+
+* In this game, you will start with a ***Cheer's!*** 
+
+* Answer each question to the best of your knowledge before the timer runs out, you will have 5 minutes to enter answers
+
+* There will be an alert when you have 30 seconds left to get your answers in!
+
+* After you are done, hit the ***Prost!*** button 
+
+* The correct answers will then pop up on the screen to the questions! 
+
 

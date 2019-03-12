@@ -2,7 +2,7 @@ $(document).ready(function() {
   loadQuestion();
 });
 
-var timer = 60;
+var timer = 300;
 var intervalID, correctAnswer= 0 , wrongAnswer = 0;
 $("#questions").hide();
 
