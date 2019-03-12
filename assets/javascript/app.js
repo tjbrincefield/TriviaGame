@@ -63,9 +63,7 @@ for (var q = 0; q < questions.length; q++ ) {
         var response = questions[q]
         // console.log(response)
         // $("#questions").append("Question: " + response);
-        $("#correctAnswers").append("Correct answer: " +  response.question +" "+ response.correctAnswer);
-        // $("#correctAnswers").css({"font-size": "30px"});
-        // $("#correctAnswers").html("<ol>");
+        $("#correctAnswers").append("Correct answer: " +  response.question +" "+ response.correctAnswer + "<ol>");
       }
     }
   }
