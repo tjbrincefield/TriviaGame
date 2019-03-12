@@ -64,6 +64,10 @@ for (var q = 0; q < questions.length; q++ ) {
         // console.log(response)
         // $("#questions").append("Question: " + response);
         $("#correctAnswers").append("Correct answer: " +  response.question +" "+ response.correctAnswer + "<ol>");
+        // I was attempting to make each correct answer show up in an ordered list on the final page - got it! :)
+        
+        // $("#correctAnswers").css({"font-size": "30px"});
+        // $("#correctAnswers").html("<ol>");
       }
     }
   }
