@@ -12,4 +12,6 @@
 
 * The correct answers will then pop up on the screen to the questions! 
 
+* Please click here to access the game!  https://tjbrincefield.github.io/TriviaGame/
+
 
